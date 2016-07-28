@@ -1,0 +1,64 @@
+---
+- MiqReport:
+    title: Watermark Report2
+    rpt_group: Custom
+    rpt_type: Custom
+    priority: 
+    db: EmsClusterPerformance
+    cols:
+    - v_date
+    - region_description
+    - resource_name
+    - max_derived_vm_count_on
+    include:
+      ems_cluster:
+        columns:
+        - total_vms
+    col_order:
+    - v_date
+    - region_description
+    - resource_name
+    - max_derived_vm_count_on
+    - ems_cluster.total_vms
+    headers:
+    - Activity Sample - Day (MM DD YY)
+    - Region Description
+    - Asset Name
+    - VMs Powered On
+    - Total Vms
+    conditions: 
+    order: Ascending
+    sortby: 
+    group: 
+    graph: 
+    dims: 
+    filename: 
+    file_mtime: 
+    categories: []
+    timeline: 
+    template_type: report
+    where_clause: 
+    db_options:
+      :interval: daily
+      :calc_avgs_by: time_interval
+      :end_offset: 0
+      :start_offset: 7776000
+    generate_cols: 
+    generate_rows: 
+    col_formats:
+    - 
+    - 
+    - 
+    - 
+    - 
+    tz: UTC
+    time_profile_id: 1000000000001
+    display_filter: 
+    col_options: {}
+    rpt_options:
+      :pdf:
+        :page_size: a4
+      :queue_timeout: 
+    miq_group_id: 1000000000001
+    user_id: 1000000000001
+    menu_name: Watermark Report2
