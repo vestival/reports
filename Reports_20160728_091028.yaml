@@ -1,6 +1,6 @@
 ---
 - MiqReport:
-    title: Watermark Report2
+    title: RedHat Licence Report
     rpt_group: Custom
     rpt_type: Custom
     priority: 
@@ -8,24 +8,30 @@
     cols:
     - v_date
     - region_description
-    - resource_name
     - max_derived_vm_count_on
     include:
       ems_cluster:
         columns:
+        - name
+        - ems_ref
+        - v_parent_datacenter
         - total_vms
     col_order:
     - v_date
     - region_description
-    - resource_name
-    - max_derived_vm_count_on
+    - ems_cluster.name
+    - ems_cluster.ems_ref
+    - ems_cluster.v_parent_datacenter
     - ems_cluster.total_vms
+    - max_derived_vm_count_on
     headers:
-    - Activity Sample - Day (MM DD YY)
+    - Date
     - Region Description
-    - Asset Name
-    - VMs Powered On
+    - Cluster Name
+    - Cluster ID
+    - Datacenter
     - Total Vms
+    - VMs Powered On
     conditions: 
     order: Ascending
     sortby: 
@@ -51,14 +57,16 @@
     - 
     - 
     - 
-    tz: UTC
-    time_profile_id: 1000000000001
+    - 
+    - 
+    tz: Berlin
+    time_profile_id: 49000000000002
     display_filter: 
     col_options: {}
     rpt_options:
       :pdf:
         :page_size: a4
       :queue_timeout: 
-    miq_group_id: 1000000000001
-    user_id: 1000000000001
-    menu_name: Watermark Report2
+    miq_group_id: 49000000000014
+    user_id: 49000000000015
+    menu_name: RedHat Licence Report
